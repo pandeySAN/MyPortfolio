@@ -1,66 +1,100 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle
+} from '@/components/ui/card';
 import { Github, ExternalLink } from 'lucide-react';
 
 const projectsData = [
   {
-    title: 'E-commerce Platform',
-    description: 'A full-stack e-commerce site with features like product search, shopping cart, and Stripe integration for payments.',
-    image: 'https://placehold.co/600x400.png',
-    hint: 'online store',
-    tags: ['Next.js', 'TypeScript', 'Stripe', 'PostgreSQL'],
-    liveUrl: '#',
-    githubUrl: '#',
+    title: 'Potato Disease Classification',
+    description:
+      'A deep learning-based web application to detect and classify potato leaf diseases using image input.',
+    image: 'https://placehold.co/600x400?text=Potato+Disease+App',
+    hint: 'plant disease detector',
+    tags: ['Python', 'TensorFlow', 'Keras', 'Streamlit'],
+    liveUrl: '#', // Add deployment link if available
+    githubUrl: 'https://github.com/pandeySAN/potato-disease-classification',
   },
   {
-    title: 'Real-time Chat App',
-    description: 'A web application enabling users to chat in real-time, built with WebSockets for instant messaging.',
-    image: 'https://placehold.co/600x400.png',
-    hint: 'messaging app',
-    tags: ['React', 'Node.js', 'Socket.IO', 'MongoDB'],
+    title: 'Breast Cancer Prediction',
+    description:
+      'A machine learning model that predicts breast cancer presence using medical data and classification algorithms.',
+    image: 'https://placehold.co/600x400?text=Breast+Cancer+ML',
+    hint: 'healthcare prediction model',
+    tags: ['Python', 'scikit-learn', 'Pandas', 'Jupyter'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/pandeySAN/Breast-Cancer-prediction',
   },
   {
-    title: 'Task Management Tool',
-    description: 'A Kanban-style task manager with drag-and-drop functionality to organize workflows and improve productivity.',
-    image: 'https://placehold.co/600x400.png',
-    hint: 'productivity tool',
-    tags: ['React', 'Firebase', 'Tailwind CSS', 'Framer Motion'],
+    title: 'Todo App',
+    description:
+      'A full-stack task management application with user authentication, CRUD operations, and responsive design.',
+    image: 'https://placehold.co/600x400?text=Todo+App',
+    hint: 'task manager',
+    tags: ['React', 'Node.js', 'MongoDB', 'Express'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/pandeySAN/Todo_app',
   },
-   {
-    title: 'Portfolio Website',
-    description: 'This very portfolio, designed to be a clean, modern, and interactive showcase of my work and skills.',
-    image: 'https://placehold.co/600x400.png',
-    hint: 'developer portfolio',
-    tags: ['Next.js', 'Tailwind CSS', 'Shadcn/UI', 'Genkit'],
+  {
+    title: 'Walmart Sparkathon Recommender',
+    description:
+      'A recommendation system that provides product suggestions using NLP and cosine similarity on Walmart product data.',
+    image: 'https://placehold.co/600x400?text=Walmart+Recommender',
+    hint: 'product recommender',
+    tags: ['Python', 'Flask', 'TF-IDF', 'Pandas'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/pandeySAN/walmart_sparkathon',
   },
 ];
 
+// Animation for cards
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut'
+    }
+  }
+};
+
 export default function ProjectsSection() {
   return (
-    <section id="projects">
+    <section id="projects" className="py-20 bg-muted/40 border-t border-border/40">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Featured Projects</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Here are some of the projects I'm proud of. Each one demonstrates my passion for creating meaningful digital experiences.
-            </p>
-          </div>
+        <div className="flex flex-col items-center justify-center text-center mb-16 space-y-4">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight font-headline">
+            🚀 Featured Projects
+          </h2>
+          <p className="max-w-2xl text-muted-foreground md:text-lg/relaxed">
+            A showcase of some of my best work—each project highlights my skills, creativity, and attention to detail.
+          </p>
         </div>
+
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {projectsData.map((project) => (
-            <Card key={project.title} className="flex flex-col overflow-hidden group transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
-              <CardHeader>
-                <div className="relative h-60 w-full overflow-hidden rounded-t-lg">
+            <motion.div
+              key={project.title}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              className="w-full"
+            >
+              <Card className="flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:scale-[1.015] backdrop-blur-md bg-white/5 border border-border">
+                <CardHeader className="relative h-60 w-full overflow-hidden rounded-t-lg p-0">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -68,32 +102,36 @@ export default function ProjectsSection() {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     data-ai-hint={project.hint}
                   />
-                </div>
-              </CardHeader>
-              <CardContent className="flex-grow p-6">
-                <CardTitle className="mb-2 font-headline">{project.title}</CardTitle>
-                <p className="text-muted-foreground mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <Badge key={tag} variant="outline">{tag}</Badge>
-                  ))}
-                </div>
-              </CardContent>
-              <CardFooter className="p-6 pt-0">
-                <div className="flex w-full justify-end gap-2">
-                  <Button variant="outline" asChild>
-                    <Link href={project.githubUrl} target="_blank">
-                      <Github className="mr-2 h-4 w-4" /> Code
-                    </Link>
-                  </Button>
-                  <Button asChild>
-                    <Link href={project.liveUrl} target="_blank">
-                      <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                    </Link>
-                  </Button>
-                </div>
-              </CardFooter>
-            </Card>
+                </CardHeader>
+
+                <CardContent className="flex-grow p-6 space-y-3">
+                  <CardTitle className="font-headline text-xl">{project.title}</CardTitle>
+                  <p className="text-muted-foreground text-sm">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {project.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary" className="px-2 py-1 text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+
+                <CardFooter className="p-6 pt-0 mt-auto">
+                  <div className="flex w-full justify-end gap-2">
+                    <Button variant="outline" asChild>
+                      <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" /> Code
+                      </Link>
+                    </Button>
+                    <Button asChild>
+                      <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                      </Link>
+                    </Button>
+                  </div>
+                </CardFooter>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -9,21 +9,21 @@ export default function HeroSection() {
           <div className="flex flex-col justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline">
-                John Doe, Software Engineer
+                Sanchit Pandey, Student
               </h1>
               <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl">
-                I build elegant, high-performance web applications. Welcome to my digital portfolio where I showcase my skills, projects, and journey in software development.
+              I'm a passionate software developer with a focus on the MERN stack and machine learning. I enjoy building responsive web apps and smart solutions that solve real-world problems. Explore my projects below!
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 transition-transform transform hover:scale-105">
-                <a href="/resume.pdf" download>
+                <a href="https://drive.google.com/file/d/1HGsQw4xHtgcYRhQtuFhLKyWhfIT2SHkc/view?usp=drive_link" download>
                   <Download className="mr-2 h-5 w-5" />
                   Download CV
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="transition-transform transform hover:scale-105">
-                <a href="#contact">
+                <a href="www.linkedin.com/in/sanchit-pandey-4682b724a">
                   <Send className="mr-2 h-5 w-5" />
                   Get in Touch
                 </a>

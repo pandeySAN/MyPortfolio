@@ -68,7 +68,7 @@ export default function Header() {
 
         <div className="flex flex-1 items-center justify-end space-x-2">
           <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <a href="/resume.pdf" download>Download CV</a>
+            <a href="https://drive.google.com/file/d/1yDURKmEYLD32RJR92dBjRP4WlCTMbWdc/view?usp=drive_link" download>Download CV</a>
           </Button>
         </div>
       </div>

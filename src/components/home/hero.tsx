@@ -17,13 +17,13 @@ export default function HeroSection() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 transition-transform transform hover:scale-105">
-                <a href="https://drive.google.com/file/d/1HGsQw4xHtgcYRhQtuFhLKyWhfIT2SHkc/view?usp=drive_link" download>
+                <a href="https://drive.google.com/file/d/1yDURKmEYLD32RJR92dBjRP4WlCTMbWdc/view?usp=drive_link" download>
                   <Download className="mr-2 h-5 w-5" />
                   Download CV
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="transition-transform transform hover:scale-105">
-                <a href="www.linkedin.com/in/sanchit-pandey-4682b724a">
+                <a href="www.linkedin.com/in/pandeysanc">
                   <Send className="mr-2 h-5 w-5" />
                   Get in Touch
                 </a>

@@ -16,6 +16,16 @@ import { Github, ExternalLink } from 'lucide-react';
 
 const projectsData = [
   {
+    title: 'Interview.AI- Interview simulator Website',
+    description:
+      'A web application that simulates real interview scenarios using AI.',
+    image: 'https://bloximages.chicago2.vip.townnews.com/thestar.com/content/tncms/assets/v3/editorial/a/33/a3373f12-6449-5b41-9a93-11ee9cfa06e2/66671a4a027ef.image.jpg?resize=750%2C500',
+    hint: 'AI interview simulator',
+    tags: ['Next.js', 'Typescript', 'Gemini', 'Firebase', 'Vapi AI'],
+    liveUrl: "https://ai-interview-simulator-green.vercel.app",
+    githubUrl: 'https://github.com/pandeySAN/AI-Interview-Simulator.git',
+  },
+  {
     title: 'Potato Disease Classification',
     description:
       'A deep learning-based web application to detect and classify potato leaf diseases using image input.',

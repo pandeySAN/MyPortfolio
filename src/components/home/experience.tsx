@@ -7,9 +7,16 @@ const experienceData = [
   {
     role: 'Web Developer Intern',
     company: 'IIT Bombay',
-    duration: 'May 2025 – June 2025',
+    duration: 'May 2025 – July 2025',
     description:
       'Built a custom, production-ready Drupal theme using HTML, CSS, PHP, and Twig for the flagship IITB Hackathon site.',
+  },
+  {
+    role: 'Software Engineer Intern',
+    company: 'Trillion skyline International LLP',
+    duration: 'Jan 2025 – March 2025',
+    description:
+      'Implemented 8+ core application features by developing over 15 RESTful API endpoints with Node.js and designing the corresponding MongoDB schemas to support new functionalities. High-fidelity UI mock-ups into responsive, pixel-perfect React.js components, which contributed to a 15% increase in user session duration and significantly enhanced the user experience.',
   },
   {
     role: 'AI Engineer Intern',

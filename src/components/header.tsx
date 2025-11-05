@@ -48,7 +48,7 @@ export default function Header() {
             <SheetContent side="left">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-6">
                 <Code2 className="h-6 w-6 text-primary" />
-                <span className="font-bold font-headline">Code Canvas</span>
+                <span className="font-bold font-headline">MyPortfolio</span>
               </Link>
               <nav className="flex flex-col space-y-4">
                 {navLinks.map((link) => (

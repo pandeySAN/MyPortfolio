@@ -5,8 +5,8 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
-  title: 'Code Canvas | Software Engineer Portfolio',
-  description: 'An advanced portfolio for a software engineer, showcasing projects, skills, and experience.',
+  title: 'Code Canvas | Sanchit Pandey Portfolio',
+  description: 'A portfolio of a software engineer, showcasing projects, skills, and experience.',
 };
 
 export default function RootLayout({

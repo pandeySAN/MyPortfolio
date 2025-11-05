@@ -5,6 +5,13 @@ import { motion } from 'framer-motion';
 
 const experienceData = [
   {
+    role: 'Software Developer',
+    company: 'Chromalab Technologies Pvt. Ltd.',
+    duration: 'Nov 2025 – Present',
+    description:
+      '◦	Developing and deploying scalable web and mobile applications using Flutter and Django, leveraging AWS for cloud integration and GitHub for efficient version control in a client-driven, service-based environment.',
+  },
+  {
     role: 'Web Developer Intern',
     company: 'IIT Bombay',
     duration: 'May 2025 – July 2025',

@@ -23,7 +23,7 @@ export default function HeroSection() {
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="transition-transform transform hover:scale-105">
-                <a href="www.linkedin.com/in/pandeysanc">
+                <a href="https://www.linkedin.com/in/pandeysanc" linkedin>
                   <Send className="mr-2 h-5 w-5" />
                   Get in Touch
                 </a>

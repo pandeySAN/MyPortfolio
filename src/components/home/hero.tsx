@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import { Button } from '@/components/ui/button';
@@ -30,7 +29,7 @@ export default function HeroSection() {
             className="inline-flex items-center rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-sm font-medium text-accent"
           >
             <span className="flex h-2 w-2 rounded-full bg-accent mr-2 animate-pulse"></span>
-            Open to Relocation & Roles
+            Open to Relocation &amp; Roles
           </motion.div>
 
           <motion.div
@@ -41,7 +40,7 @@ export default function HeroSection() {
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight font-headline text-foreground/90">
               Software Engineer
-              <span className="block text-accent/90 mt-2 font-medium">Backend & AI</span>
+              <span className="block text-accent/90 mt-2 font-medium">Backend &amp; AI</span>
             </h1>
             <p className="max-w-[600px] text-muted-foreground md:text-lg leading-relaxed font-body">
               Building scalable backend systems and intelligent AI solutions. Focused on performance, reliability, and clean architecture.
@@ -67,40 +66,6 @@ export default function HeroSection() {
               </a>
             </Button>
           </motion.div>
-=======
-import { Button } from '@/components/ui/button';
-import { Download, Send } from 'lucide-react';
-
-export default function HeroSection() {
-  return (
-    <section className="w-full py-24 md:py-32 lg:py-40 bg-background">
-      <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-1 lg:gap-12 xl:grid-cols-1">
-          <div className="flex flex-col justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline">
-                Sanchit Pandey, Student
-              </h1>
-              <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl">
-              I'm a passionate software developer with a focus on the MERN stack and machine learning. I enjoy building responsive web apps and smart solutions that solve real-world problems. Explore my projects below!
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 transition-transform transform hover:scale-105">
-                <a href="https://drive.google.com/file/d/1yDURKmEYLD32RJR92dBjRP4WlCTMbWdc/view?usp=drive_link" download>
-                  <Download className="mr-2 h-5 w-5" />
-                  Download CV
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="transition-transform transform hover:scale-105">
-                <a href="https://www.linkedin.com/in/pandeysanc" linkedin>
-                  <Send className="mr-2 h-5 w-5" />
-                  Get in Touch
-                </a>
-              </Button>
-            </div>
-          </div>
->>>>>>> e8c70d90289f57a10c6a5cdf5c181af3f735b960
         </div>
       </div>
     </section>

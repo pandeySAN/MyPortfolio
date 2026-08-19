@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 33% 99%;
+    --foreground: 224 44% 14%;
+    --card: 240 40% 98%;
+    --card-foreground: 224 44% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 44% 14%;
+    --primary: 224 44% 14%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 240 30% 95%;
+    --secondary-foreground: 224 44% 14%;
+    --muted: 240 25% 95%;
+    --muted-foreground: 222 15% 46%;
+    --accent: 245 82% 63%;
+    --accent-foreground: 0 0% 100%;
+    --accent-2: 189 94% 55%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 25% 90%;
+    --input: 240 25% 90%;
+    --ring: 245 82% 63%;
+    --radius: 0.75rem;
+    --chart-1: 245 82% 63%;
+    --chart-2: 189 94% 55%;
+    --chart-3: 280 70% 65%;
+    --chart-4: 330 75% 65%;
+    --chart-5: 25 90% 60%;
+  }
+  .dark {
+    --background: 230 35% 6%;
+    --foreground: 220 25% 94%;
+    --card: 228 32% 10%;
+    --card-foreground: 220 25% 94%;
+    --popover: 228 32% 10%;
+    --popover-foreground: 220 25% 94%;
+    --primary: 220 25% 94%;
+    --primary-foreground: 230 35% 6%;
+    --secondary: 226 28% 15%;
+    --secondary-foreground: 220 25% 94%;
+    --muted: 226 28% 15%;
+    --muted-foreground: 220 15% 65%;
+    --accent: 245 90% 70%;
+    --accent-foreground: 0 0% 100%;
+    --accent-2: 189 94% 60%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 226 28% 17%;
+    --input: 226 28% 17%;
+    --ring: 245 90% 70%;
+    --chart-1: 245 90% 70%;
+    --chart-2: 189 94% 60%;
+    --chart-3: 280 75% 70%;
+    --chart-4: 330 80% 70%;
+    --chart-5: 25 90% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Soft animated gradient mesh backdrop */
+.gradient-mesh {
+  background-image:
+    radial-gradient(at 15% 10%, hsla(245, 82%, 63%, 0.16) 0px, transparent 55%),
+    radial-gradient(at 85% 15%, hsla(189, 94%, 55%, 0.14) 0px, transparent 50%),
+    radial-gradient(at 50% 90%, hsla(280, 70%, 65%, 0.12) 0px, transparent 55%);
+  background-attachment: fixed;
+}
+
+.text-gradient {
+  background-image: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-2)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}

@@ -60,7 +60,7 @@ export default function HeroSection() {
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full h-12 px-8 transition-all hover:bg-accent hover:text-white hover:border-accent">
-              <a href="https://drive.google.com/file/d/1h4CEqrd2GUkBj-5WM_gM8wR6p-8MGLaI/view?usp=drive_link" download target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/18DmbzomndtddO1Da2GI-VgeRORTfGZ0k/view?usp=sharing" download target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-4 w-4" />
                 Download CV
               </a>

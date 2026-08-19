@@ -71,7 +71,7 @@ export default function Header() {
         <div className="flex flex-1 items-center justify-end space-x-4">
           <ThemeToggle />
           <Button asChild className="bg-accent text-white hover:bg-accent/90 rounded-full px-6 font-medium shadow-sm transition-all hover:scale-105 active:scale-95 hidden sm:flex">
-            <a href="https://drive.google.com/file/d/1h4CEqrd2GUkBj-5WM_gM8wR6p-8MGLaI/view?usp=drive_link" download target="_blank" rel="noopener noreferrer">
+            <a href="https://drive.google.com/file/d/18DmbzomndtddO1Da2GI-VgeRORTfGZ0k/view?usp=sharing" download target="_blank" rel="noopener noreferrer">
               <Download className="mr-2 h-4 w-4" />
               Resume
             </a>
